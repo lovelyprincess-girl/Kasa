@@ -23,4 +23,20 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+
+    &__logo {
+      width: 120px;
+    }
+
+    &__nav {
+      gap: 15px;
+
+      a {
+        font-size: 12px;
+      }
+    }
+  }
 }

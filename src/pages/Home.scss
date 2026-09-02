@@ -6,4 +6,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
   }
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 27px;
+    }
+  }
 }
