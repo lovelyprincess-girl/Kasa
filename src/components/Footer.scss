@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 40px 0;
+  gap: 20px;
+
+  &__logo {
+    width: 150px;
+    filter: brightness(0) invert(1);
+  }
+
+  &__text {
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    max-width: 200px;
+  }
+}
