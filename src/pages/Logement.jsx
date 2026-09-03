@@ -1,15 +1,32 @@
+import { useState, useEffect } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
-import logements from '../data/logements.json'
 import Gallery from '../components/Gallery'
 import Collapse from '../components/Collapse'
 import './Logement.scss'
 
 function Logement() {
   const { id } = useParams()
-  const logement = logements.find((item) => item.id === id)
+  const [logement, setLogement] = useState(null)
+  const [notFound, setNotFound] = useState(false)
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/properties/${id}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Logement non trouvé')
+        }
+        return response.json()
+      })
+      .then((data) => setLogement(data))
+      .catch(() => setNotFound(true))
+  }, [id])
+
+  if (notFound) {
+    return <Navigate to="/404" replace />
+  }
 
   if (!logement) {
-    return <Navigate to="/404" replace />
+    return null
   }
 
   return (
