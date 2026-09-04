@@ -1,6 +1,7 @@
 .collapse {
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   &__header {
     width: 100%;
@@ -32,7 +33,7 @@
   &__content {
     max-height: 0;
     overflow: hidden;
-    background-color: #ff6060;
+    background-color: #ffffff;
     transition: max-height 0.3s ease;
 
     &--open {
@@ -42,7 +43,7 @@
 
   &__inner {
     padding: 15px 20px;
-    color: #ffffff;
+    color: #000000;
     font-size: 14px;
     line-height: 1.5;
   }

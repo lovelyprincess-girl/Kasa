@@ -1,0 +1,22 @@
+.not-found {
+  padding: 60px 79px;
+  text-align: center;
+
+  &__title {
+    color: #ff6060;
+    font-size: 96px;
+    margin: 0;
+  }
+
+  &__message {
+    color: #ff6060;
+    font-size: 18px;
+    margin: 20px 0 60px 0;
+  }
+
+  &__link {
+    color: #000000;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+}
