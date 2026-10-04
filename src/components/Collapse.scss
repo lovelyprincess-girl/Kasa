@@ -21,13 +21,9 @@
     font-weight: 600;
   }
 
-  &__icon {
-    font-size: 24px;
-    transition: transform 0.3s ease;
-
-    &--open {
-      transform: rotate(180deg);
-    }
+   &__icon {
+    display: flex;
+    align-items: center;
   }
 
   &__content {
